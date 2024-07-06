@@ -1,0 +1,62 @@
+* {
+    margin: 20px;
+    padding: 10px;
+    box-sizing: content-box;
+    font-family: 'Open Sans';
+    font-size: xx-large;
+}
+
+body {
+    background-image: url("../img/fondo.jpg");
+    /* background-size: xx-large;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    position: relative;
+    top: 20%;
+    left: 30%;
+    /* font-size: 200%; */
+    color: brown;
+}
+
+@media screen and (max-width: 1400px) {
+    * {
+        margin: 20px;
+        padding: 10px;
+        box-sizing: content-box;
+        font-family: 'Open Sans';
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    * {
+        margin: 20px;
+        padding: 10px;
+        box-sizing: content-box;
+        font-family: 'Open Sans';
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 20px;
+        padding: 10px;
+        box-sizing: content-box;
+        font-family: 'Open Sans';
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    * {
+        margin: 20px;
+        padding: 10px;
+        box-sizing: content-box;
+        font-family: 'Open Sans';
+        font-size: small;
+    }
+}

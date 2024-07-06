@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/inicio.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+        <title>Inicio del sistema</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Mensaje de éxito -->
+            <div id="mensajeExito" style="display: none;" data-aos="fade-down" data-aos-duration="1000"
+                 class="alert alert-success alert-dismissible fade show" role="alert">
+                Registro exitoso
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                        onclick="this.parentElement.style.display = 'none';"></button>
+            </div>
+
+            <!-- Mensaje de error -->
+            <div id="mensajeError" style="display: none;" data-aos="fade-down" data-aos-duration="1000"
+                 class="alert alert-danger alert-dismissible fade show" role="alert">
+                Error en el registro
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                        onclick="this.parentElement.style.display = 'none';"></button>
+            </div>
+        </div>
+        <form action="/CACFLixFinal/login" method="post"  id="validaus"> 
+            <div class="login">
+                <p>
+                <h4>Ingresar usuario y contraseña</h4>
+                </p>
+                <br>   
+                <div>
+                    <label for="nombre">Email</label>
+                    <input type="email" name="nombre" id="nombrel" value="correo@electronico.com" requierd>
+                    <br>    
+
+                    <div id="error1"></div>
+                    <br>       
+                </div>
+                <br>
+                <div>
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="pass" id="passl" value="password" required>
+                    <br>    
+                    <div id="error2"></div>
+                    <br>
+                </div>
+                <div>
+                    <input type="submit" name="ret" id="retl" value="Validar">
+                    <input type="reset" name="res" id="resl" value="Cancelar">
+                    <input type="button" name="modo" id="modol" value="Registro" onclick="cambiomodo()">
+                </div>
+            </div>
+        </form>
+        <form action="/CACFLixFinal/registro" method="post" id="registraus"> 
+            <div class="registro">
+                <p>
+                <h4>Ingresar información de registro</h4>
+                </p>
+                <br>
+                <div>
+                    <label for="documento">Documento</label>
+                    <input type="text" name="documento" id="docu" value="documento" pattern="[0-9]*" title="Por favor, ingrese solo números" requierd>
+                    <br>
+                </div>
+                <div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" value="apellido" requierd>
+                    <br>
+                </div>
+                <div>
+                    <label for="nombres">Nombres</label>
+                    <input type="text" name="nombres" id="nombres" value="nombres" requierd>
+                    <br>
+                </div>
+                <div>
+                    <label for="direccion">Dirección</label>
+                    <input type="text" name="direccion" id="dire" value="domicilio" requierd>
+                    <br>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="correo" value="correo@electronico.com" requierd>
+                    <br>
+                </div>
+                <div>
+                    <label for="pass">Contraseña</label>
+                    <input type="password" name="pass" id="passr" value="password" required>
+                    <br>
+                </div>
+                <fieldset>
+                    <legend id="tipo">Tipo de usuario</legend>
+                    <div>
+                        <input type="radio" id="admin" name="tipo" value="A" />
+                        <label for="admin">Administrador</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="user" name="tipo" value="C" checked />
+                        <label for="user">Cliente</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option value="0">Activo</option>
+                        <option value="1">Inactivo</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" name="ret" id="retr" value="Grabar">
+                    <input type="button" name="modo" id="modor" value="Login" onclick="cambiomodo()">
+                </div>
+            </div>
+        </form>
+        <script src="js/inicio.js"></script>
+    </body>
+
+</html>

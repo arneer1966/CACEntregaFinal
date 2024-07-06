@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contacto.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <h2>Formulario de contacto</h2>
+    <form action="" method="post">
+        <label for="nombre">Nombre/s:</label>
+        <input type="text" id="nombre" placeholder="nombre">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" placeholder="apellido">
+        <br><!--salto de linea-->
+        <br>
+        <label for="email">Correo electronico:</label>
+        <input type="email" id="email" required>
+        <br>
+        <br>
+        <label for="problema">Origen del problema:</label>
+        <select name="" id="problema">
+            <option value="">definicion de video</option>
+            <option value="">cortes en reproduccion</option>
+            <option value="">recomendaciones</option>
+            <option value="">problemas con el usuario</option>
+            <option value="">otros</option>
+        </select>
+        <br>
+        <br>
+        <label for="detalle">Breve detalle de su consulta:</label>
+        <br>
+        <textarea name="detalle" id="detalle" cols="50" rows="10"></textarea>
+        <br>
+        <br>
+        <input type="submit" name="ret" id="ret" value="Grabar">
+        <br>
+        <br>
+        <input type="reset" name="res" id="res" value="Borrar">
+    </form>
+    <br>
+    <a href="index.html">
+        <button>Menú principal</button>
+    </a>
+</body>
+
+</html>

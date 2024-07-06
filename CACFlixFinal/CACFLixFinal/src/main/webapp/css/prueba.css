@@ -1,0 +1,14 @@
+body {
+    background-image: url("../img/construc2.jpg");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    position: relative;
+    top: 20%;
+    left: 30%;
+    font-size: 200%;
+    color: brown;
+}

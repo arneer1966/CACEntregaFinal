@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Expires" content="0">
+    <!--        La icono en solapa del navegador: -->
+    <link rel="icon" href="img/icono.png">
+    <!--        Defina el juego de caracteres utilizado:    -->
+    <meta charset="UTF-8">
+    <!--        Actualizar el documento cada 30 segundos:    -
+    <meta http-equiv="refresh" content="600"> ->
+    <!--        Definir palabras clave para motores de búsqueda:    -->
+    <meta name="keywords" content="CODOACODO4.0, HTML, CSS, Java, JavaScript">
+    <!--        Defina una descripción de su página web:    -->
+    <meta name="description" content="Codo A Codo streaming">
+    <!--        Definir el autor de una página:    -->
+    <meta name="author" content="Ariel Rubén Neer">
+    <!--        Configura la ventana gráfica para que su sitio web se vea bien en todos los dispositivos:    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--        titulo de la pagina -->
+    <script src="https://kit.fontawesome.com/cf8ddb4a4a.js" crossorigin="anonymous"></script>
+    <title>CodoACodoFlix</title>
+    <!--        AOS ANIMATION -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--        La hoja de estilo externa -->
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+</head>
+
+<body>
+    <!-- DETAILS/SUMMARY etiquetas semanticas especiales para docuemntacion -->
+    <details class="CAC40">
+        Codo A Codo 4.0 TP1
+        <summary><strong>Trabajo práctico integrador</strong><mark>(presionar en esta barra, para ver contenido de esta
+                entrega)</mark></summary>
+        <p><strong>Primera entrega: Trabajo práctico integrador<br>
+                Grupos separados: Comisión 24111<br>
+                <br>
+                <mark>
+                    Team:<br>
+
+                    Ariel Ruben Neer (Entrega individual)<br>
+                </mark>
+                <br>
+                Pre-Entrega Integrador Front:<br>
+                <br><br>
+                Deberán replicar la siguiente Página Web con lo visto en clase hasta el momento, puede ser código <br>
+                nativo o Bootstrap<br>
+                <br><br>
+                *Es importante recordar que quizá algunos eligieron una temática distinta a la planteada, y es válida
+                la<br>
+                entrega mientras se respete la estructura base<br>
+                <br><br>
+                La entrega será pegando el link de donde está alojado su trabajo, puede ser cualquiera de las <br>
+                siguientes alternativas:<br>
+                <br>
+                github-pages: (ver siguiente video)<br>
+                <br>
+                Servidor gratuito: https://www.000webhost.com/<br>
+                <br>
+                Alguna herramienta que permita alojar el trabajo.<br>
+                <br><br>
+                Les dejamos un tutorial de como publicar la pre-entrega en el aula virtual:<br>
+                <br>
+                <mark>Fecha entrega: 26/4/2024 <br>
+                    <br>
+                    <a href="https://github.com/arneer1966/CACEntrega1">archivos fuentes y
+                        documentacion:https://github.com/arneer1966/CACEntrega1</a></mark></strong>
+            <br>
+        </p>
+
+    </details>
+    <!--   Cabecera del formulario --->
+    <header>
+        <!-- titulo -->
+        <span>
+            <h1>CACFlix</h1>
+        </span>
+        <!-- buscador -->
+        <section>
+            <h2>¿Qué estas buscando para ver?</h2>
+            <form class="buscar">
+                <input type="text" placeholder="Buscar..." name="buscar">
+                <input type="submit" value="Buscar">
+            </form>
+        </section>
+        <!-- menu principa -->
+        <section>
+            <nav>
+                <!-- MENU una alternativa semántica a <ul>, pero los navegadores lo tratan (y lo exponen a través 
+                    del árbol de accesibilidad) como no diferente de <ul>. Representa una lista desordenada de elementos 
+                    (que están representados por elementos <li>) -->
+                <menu class="mhoriz" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="0">
+                    <li class="itemhoriz"><a onmousedown="validarUs(event,false)" href="inicio.html">Inicio</a></li>
+                    <li class="itemhoriz"><a onmousedown="validarUs(event,true)" href="vistagral.html">Estrenos</a></li>
+                    <li class="itemhoriz"><a onmousedown="validarUs(event,true)" href="prueba.html">Películas</a></li>
+                    <li class="itemhoriz"><a onmousedown="validarUs(event,true)" href="prueba.html">Series</a></li>
+                    <li class="itemhoriz"><a onmousedown="validarUs(event,true)" href="#">Categorias</a>
+                        <menu class="mvert" onmousedown="validarUs(event,true)">
+                            <li class="itemvert"><a href="prueba.html">Acción</a></li> <!--#acc-->
+                            <li class="itemvert"><a href="prueba.html">Terror</a></li> <!--#ter-->
+                            <li class="itemvert"><a href="prueba.html">Aventura</a></li> <!--#ave-->
+                            <li class="itemvert"><a href="prueba.html">Drama</a></li> <!--#dra-->
+                            <li class="itemvert"><a href="prueba.html">infantil</a></li> <!--#inf-->
+                            <li class="itemvert"><a href="prueba.html">Fantasía</a></li> <!--#fan-->
+                            <li class="itemvert"><a href="prueba.html">Romance</a></li> <!--#rom-->
+                        </menu>
+                    </li>
+                    <li class="itemhoriz"><a onmousedown="validarUs(event,true)" href="contacto.html">Contacto</a></li>
+                </menu>
+            </nav>
+        </section>
+        <!-- fin menu principal-->
+
+        <!-- menu vertical y pelicuals flex contiene otros 2 flex -->
+        <section onmousedown="validarUs(event,true)" class="container" data-aos="flip-up" data-aos-duration="3000"
+            data-aos-delay="0">
+            <!-- menu lateral izquierdo -->
+            <aside class="item1 container-vert">
+                <ul class="item-vert">
+                    <li><a href="prueba.html">Ver_luego</a></li> <!--#visto-->
+                    <li><a href="vistagral.html">Estrenos</a></li> <!--#estreno-->
+                    <li><a href="prueba.html">Películas</a></li> <!--#pelicula-->
+                    <li><a href="prueba.html">Series</a></li> <!--#serie-->
+                    <li><a href="prueba.html">Categorias</a></li> <!--#categorias-->
+                </ul>
+            </aside>
+            <!-- fin menu lateral izquierdo -->
+            <!-- contenedor de peliculas -->
+            <section class="item2">
+                <article class="container-horiz" id="vista">
+ <!--                   <button class="boton" onclick="controlCarrusel('vista','S')">=></button>'/n'
+                    <div class="item-horiz" onclick="seleccionar(false,'vista',1)"><img src="img/fondo.jpg" alt="Ver"></div>'/n'
+                    <div class="item-horiz" onclick="seleccionar(false,'vista',2)"><img src="img/fondo.jpg" alt="Ver"></div>'/n'
+                    <div class="item-horiz" onclick="seleccionar(false,'vista',3)"><img src="img/fondo.jpg" alt="Ver"></div>'/n'
+                    <div class="item-horiz" onclick="seleccionar(false,'vista',4)"><img src="img/fondo.jpg" alt="Ver"></div>'/n'
+                    <button class="boton" onclick="controlCarrusel('vista','A')"><=</button>'/n'-->
+                </article>
+                <article class="container-horiz" id="estrenos">
+                </article>
+                <article class="container-horiz" id="peliculas">
+                </article>
+                <article class="container-horiz" id="series">
+                </article>
+                <article class="container-horiz">
+                    <div class="item-horiz"><a href="prueba.html">Acción</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Terror</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Aventura</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Drama</a></div>
+                    <div class="item-horiz"><a href="prueba.html">infantil</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Fantasía</a></div>
+                    <div class="item-horiz"><a href="prueba.html">Romance</a></div>
+                </article>
+                <!-- fin contenedor de peliculas -->
+            </section>
+            <!-- fin flex principal -->
+        </section>
+        <!--fin menu vertical y pelicuals flex contiene otros 2 flex -->
+    </header>
+    <!-- Seccion main -->
+    <main>
+        <!-- 
+        <section id="estreno">
+        </section>
+
+        <section id="pelicula">
+        </section>
+
+        <section id="serie">
+        </section>
+
+        <section id="acc">
+        </section>
+
+        <section id="ter">
+        </section>
+
+        <section id="ave">
+        </section>
+
+        <section id="dra">
+        </section>
+
+        <section id="inf">
+        </section>
+
+        <section id="fan">
+        </section>
+
+        <section id="rom">
+        </section>
+ -->
+    </main>
+
+    <!-- pie de pagina -->
+    <footer onmousedown="validarUs(event,true)" data-aos="flip-right">
+        <!-- <table clase="foot"> -->
+        <table>
+            <tr>
+                <td>
+                    <h6>Contacto: cacflix2024@gmail.com</h6>
+                </td>
+                <td> || </td>
+                <td>Síguenos en: </td>
+                <td> | </td>
+                <td><a href="https://X.com/cacflix" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </td>
+                <td> | </td>
+                <td><a href="https://facebook.com/cacflix" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </td>
+                <td> | </td>
+                <td><a href="https://instagram.com/cacflix" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </td>
+                <td> || </td>
+                <td>
+                    <h6>&copy 2024 Codo A Codo Flix (primera entrega).</h6>
+                </td>
+        </table>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // inicializa AOS
+        AOS.init();
+    </script>
+</body>
+
+</html>

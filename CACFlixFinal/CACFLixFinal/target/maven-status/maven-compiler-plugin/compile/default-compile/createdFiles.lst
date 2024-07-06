@@ -1,0 +1,9 @@
+controller\RegistroServlet.class
+modelo\Pelicula.class
+conexion_bdatos\ConexionDB.class
+controller\LoginServlet.class
+controller\GestionUsuariosServlet.class
+dao\PeliculaDAO.class
+dao\UsuarioDAO.class
+controller\PelisUsuario.class
+modelo\Usuario.class
